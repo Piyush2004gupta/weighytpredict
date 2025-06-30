@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Height Prediction</title>
+</head>
+<body>
+    <h1>Predict Weight Based on Height</h1>
+    <form action="/predictdatapoint" method="POST">
+        <label for="Height">Enter Height:</label>
+        <input type="text" name="Height" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if results %}
+        <h2>Prediction Result: {{ results }}</h2>
+    {% endif %}
+</body>
+</html>
